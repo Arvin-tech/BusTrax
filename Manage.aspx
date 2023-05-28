@@ -39,6 +39,7 @@
                                     <EditItemTemplate>
                                         <asp:TextBox ID="txtUpdatedEmail" runat="server" Text='<%# Bind("Email") %>' CssClass="form-control" AutoCompleteType="Disabled"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtUpdatedEmail" ErrorMessage="Email is required!" CssClass="text-danger"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="regexEmail" runat="server" ControlToValidate="txtUpdatedEmail" ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" ErrorMessage="Invalid Email" CssClass="text-danger"></asp:RegularExpressionValidator>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
                                 <asp:CommandField ShowEditButton="true" />
